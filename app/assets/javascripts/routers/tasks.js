@@ -3,6 +3,8 @@ Todo.Routers.Tasks = Backbone.Router.extend({
     "": "index"
   },
   index: function() {
-    alert('Hello, world! This is a Backbone router action.');
+    var view = new Todo.Views.TasksIndex({ collection: Todo.tasks });
+    $('body').html(view.render().$el);
   }
 });
+
